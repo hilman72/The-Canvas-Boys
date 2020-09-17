@@ -15,6 +15,7 @@ class Drawingpaintb extends PaintFunction {
   onMouseDown(coord, event) {
     this.Drawing = true;
     this.context.moveTo(coord[0], coord[1]);
+    saveState(canvasReal);
   }
   onDragging() {}
 
