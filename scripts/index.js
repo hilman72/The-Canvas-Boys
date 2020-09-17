@@ -4,10 +4,10 @@ let canvasDraft = document.getElementById("canvas-draft");
 let contextDraft = canvasDraft.getContext("2d");
 let currentFunction;
 let dragging = false;
-contextReal.strokeStyle = "rgba(255, 255, 255, 1)";
-contextReal.fillStyle = "rgba(255, 255, 255, 1)";
-contextDraft.strokeStyle = "rgba(255, 255, 255, 1)";
-contextDraft.fillStyle = "rgba(255, 255, 255, 1)"; // initial brush color
+contextReal.strokeStyle = "rgba(0, 0, 0, 1)";
+contextReal.fillStyle = "rgba(0, 0, 0, 1)";
+contextDraft.strokeStyle = "rgba(0, 0, 0, 1)";
+contextDraft.fillStyle = "rgba(0, 0, 0, 1)"; // initial brush color
 contextReal.lineWidth = 1;
 contextDraft.lineWidth = 1;
 contextDraft.lineCap = "round";

@@ -39,7 +39,6 @@ html {
 .canvas {
   position: absolute;
   overflow: hidden;
-  border: 5px solid orange;
 }
 
 /******************************************************************************/
