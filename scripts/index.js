@@ -64,8 +64,6 @@ $("#canvas-draft").mouseenter(function (e) {
   currentFunction.onMouseEnter([mouseX, mouseY], e);
 });
 
-// Handle Colors
-
 // Handle Brushes
 var brushes = document.getElementsByClassName("brushes")[0];
 
@@ -79,6 +77,9 @@ var clearButton = document.getElementById("clear");
 
 clearButton.addEventListener("click", function () {
   contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
+  contextReal.fillStyle = "white";
+  contextReal.fillRect(0, 0, canvasStart.width, canvasStart.height);
+  contextReal.fillStyle = "black";
 });
 
 // Handle Save Button

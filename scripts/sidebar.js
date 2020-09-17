@@ -9,6 +9,7 @@ $(document).ready(function () {
     if (start === false) {
       contextStart.fillStyle = "white";
       contextStart.fillRect(0, 0, canvasStart.width, canvasStart.height);
+      contextStart.fillStyle = "black";
       start = true;
     }
   });
