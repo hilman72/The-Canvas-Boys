@@ -32,6 +32,7 @@ html {
 
 .mainNav {
   background-color: #000000 !important;
+  border-bottom: 1px solid orange;
 }
 
 /* Canvas */
@@ -51,27 +52,30 @@ html {
   transition: all 0.5s;
 }
 
-#sidebar {
+#sidebar,
+#premiumSidebar {
   max-width: 18rem;
   min-width: 18rem;
   transition: all 0.5s;
   font-weight: bold;
   z-index: 999;
 }
+
 .inner-sidebar {
   max-width: 18rem;
   min-width: 18rem;
 }
 
 .sidebar-header {
-  border-bottom: 1px solid #f5cb5c;
+  border-bottom: 1px solid orange;
 }
 
 .sidebar-subhead {
   height: auto;
 }
 
-#sidebar.active {
+#sidebar.active,
+#premiumSidebar.active {
   margin-left: -18rem;
   height: 100vh;
 }

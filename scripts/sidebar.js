@@ -15,4 +15,8 @@ $(document).ready(function () {
   });
 });
 
-//Dropdown menu
+$(document).ready(function () {
+  $("#sidebarCollapse").on("click", function () {
+    $("#premiumSidebar, #content").toggleClass("active");
+  });
+});
