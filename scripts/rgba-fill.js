@@ -41,7 +41,7 @@ const fillPickr = Pickr.create({
   },
 });
 
-let curFill = "rgba(0, 0, 0, 1)";
+let curFill = "rgba(255, 255, 255, 1)";
 
 let curFill_second = curFill.replace(/[^,]+(?=\))/, "0.5");
 

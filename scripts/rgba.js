@@ -42,7 +42,7 @@ const pickr = Pickr.create({
 });
 
 // Handle Colors
-let curst = "rgba(0, 0, 0, 1)";
+let curst = "rgba(255, 255, 255, 1)";
 
 let curst_first = curst.replace(/[^,]+(?=\))/, "1");
 

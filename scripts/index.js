@@ -4,20 +4,18 @@ let canvasDraft = document.getElementById("canvas-draft");
 let contextDraft = canvasDraft.getContext("2d");
 let currentFunction;
 let dragging = false;
-contextReal.strokeStyle = "rgba(0, 0, 0, 1)";
-contextReal.fillStyle = "rgba(0, 0, 0, 1)";
-contextDraft.strokeStyle = "rgba(0, 0, 0, 1)";
-contextDraft.fillStyle = "rgba(0, 0, 0, 1)"; // initial brush color
+contextReal.strokeStyle = "rgba(255, 255, 255, 1)";
+contextReal.fillStyle = "rgba(255, 255, 255, 1)";
+contextDraft.strokeStyle = "rgba(255, 255, 255, 1)";
+contextDraft.fillStyle = "rgba(255, 255, 255, 1)"; // initial brush color
 contextReal.lineWidth = 1;
 contextDraft.lineWidth = 1;
 contextDraft.lineCap = "round";
 contextReal.lineCap = "round";
 contextDraft.lineJoin = "round";
 contextReal.lineJoin = "round";
-var canvasWidth = canvasReal.width;
-var canvasHeight = canvasReal.height;
 
-// resizing canvas window 
+// resizing canvas window
 
 var render = function () {
   canvasReal.width = document.documentElement.clientWidth * 0.8;
@@ -25,11 +23,10 @@ var render = function () {
 
   canvasDraft.width = document.documentElement.clientWidth * 0.8;
   canvasDraft.height = document.documentElement.clientHeight * 0.8;
-}
+};
 
 window.addEventListener("resize", render);
 render();
-
 
 $("#canvas-draft").mousedown(function (e) {
   let mouseX = e.offsetX;
@@ -68,7 +65,6 @@ $("#canvas-draft").mouseenter(function (e) {
 });
 
 // Handle Colors
-
 
 // Handle Brushes
 var brushes = document.getElementsByClassName("brushes")[0];
