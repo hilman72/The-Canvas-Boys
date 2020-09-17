@@ -31,7 +31,7 @@ html {
 }
 
 .mainNav {
-  background-color: #000000 !important;
+  background-color: #1b1b1b !important;
   border-bottom: 1px solid orange;
 }
 
@@ -52,8 +52,7 @@ html {
   transition: all 0.5s;
 }
 
-#sidebar,
-#premiumSidebar {
+#sidebar {
   max-width: 18rem;
   min-width: 18rem;
   transition: all 0.5s;
@@ -87,11 +86,6 @@ html {
 #sidebar ul li a {
   padding: 1rem;
   display: block;
-}
-
-#sidebar ul li a:hover {
-  color: #495057;
-  background: #f5cb5c;
 }
 
 #content {
@@ -269,6 +263,7 @@ html {
 .btn-info:hover {
   transform: scale(1.1);
   border: 1px solid black !important;
+  transition: 0.3s;
 }
 
 .utility {
@@ -466,8 +461,8 @@ html {
 }
 
 #premiumSidebar {
-  max-width: 19rem;
-  min-width: 19rem;
+  max-width: 18rem;
+  min-width: 18rem;
   opacity: 0.75;
   transition: all 0.5s;
   font-weight: bold;

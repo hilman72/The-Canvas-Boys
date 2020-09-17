@@ -7,6 +7,7 @@ $(document).ready(function () {
   $("#sidebarCollapse").on("click", function () {
     $("#sidebar, #content").toggleClass("active");
     if (start === false) {
+      canvasStart.style.backgroundColor = "white";
       contextStart.fillStyle = "white";
       contextStart.fillRect(0, 0, canvasStart.width, canvasStart.height);
       contextStart.fillStyle = "black";
@@ -16,7 +17,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $("#sidebarCollapse").on("click", function () {
+  $("#sidebarCollapse2").on("click", function () {
     $("#premiumSidebar, #content").toggleClass("active");
   });
 });
