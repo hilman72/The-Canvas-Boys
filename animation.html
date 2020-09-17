@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <title>The Canvas Boys Project</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- sidebar -->
+        <nav id="premiumSidebar" class="bg-dark text-white active">
+            <div class="inner-sidebar">
+                <div class="sidebar-header p-3 pt-5 bg-dark">
+                    <h3><a href="#hero">Features</a></h3>
+                </div>
+                <div class="sidebar-subhead p-3 bg-dark">
+                    <h4 class="m-0"><a href="#hero">Colors</a></h4>
+                </div>
+                <div class="btn-group ballColors" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btnA1" id="color1"></button>
+                    <button type="button" class="btn btnA2" id="color2"></button>
+                    <button type="button" class="btn btnA3" id="color3"></button>
+                    <button type="button" class="btn btnA4" id="color4"></button>
+                    <button type="button" class="btn btnA5" id="color5"></button>
+                    <button type="button" class="btn btnA6" id="color6"></button>
+                    <button type="button" class="btn btnA7" id="color7"></button>
+                    <button type="button" class="btn btnA8" id="color8"></button>
+                </div>
+                <div class="sidebar-subhead p-3 bg-dark">
+                    <h4 class="m-0"><a href="#hero">Ball Velocity</a></h4>
+                </div>
+                <div class="btn-group brushes">
+                    <button class="btn size-1 btn-info velocity" id="slow" type="button" value="1">
+                      Slow
+                    </button>
+                    <button class="btn size-2 btn-info velocity" id="medium" type="button" value="5">
+                      Medium
+                    </button>
+                    <button class="btn size-3 btn-info velocity" id="fast" type="button" value="10">
+                      Fast
+                    </button>
+                </div>
+
+        <!--Utilities / Play function-->
+
+                <div class="sidebar-subhead p-3 bg-dark">
+                    <h4 class="m-0"><a href="#hero">Play Functions </a></h4>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <button id="circle" class="utilities"><i class="fas fa-circle ballUtility"></i></button>
+                        </div>
+                        <div class="col-4"> 
+                            <button id="circleStroke" class="utilities"><i class="far fa-circle ballUtility"></i></button>
+                        </div>
+                        <div class="col-4">                            
+                            <button id="abstractMode" class="utilities"><i class="fas fa-dragon ballUtility"></i></button>
+                        </div>
+                    </div>
+                    <div class = "ballMultiplier">
+                    <span class="mr-2">Ball Multiplier:</span><input type="number" id="numberOfCircles" min="100" max="10000" value="0">
+                    </div>
+                    <div class="clearIcon">
+                        <button id="clearBalls" class="utilities"><i class="fas fa-ban ballUtility"></i></button>
+                    <div class="copyrightBox">
+                    </div>
+                    <p class ="copyright">Copyright © 2020 Hilman C., Adrian C. & Curtis L. All Rights Reserved</p>
+                    </div>
+        </nav>
+        <!-- sidebar end -->
+        <!----content  -->
+
+        <div id="content">
+
+            <!----navbar  -->
+            <!----navbar end -->
+            <!----Hero  -->
+            <div id="hero" class="hero ">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top mainNav">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn menu-btn">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                        <a class="navbar-brand px-4 py-3" href="#"><img class="canvasBoysLogo" src="images/CanvasBoys.png"><span class="premium"> P R E M I U M</span></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link px-4 py-3" href="index.html">Draw Mode</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link px-4 py-3" href="animation.html">Animation Mode</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+                <div id="canvasFrame" class="dark-layer">
+                    <canvas class="canvas" id="canvas-real" height="600px" width="1400px"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!----Hero end -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts/sidebar.js" type="text/javascript"></script>
+    <script src="scripts/animation-mode.js" type="text/javascript"></script>
+
+</body>
+
+</html> 
