@@ -13,32 +13,19 @@ a:focus {
   transition: all 0.3s;
 }
 
-hr {
-  border-color: grey;
-  opacity: 0.3;
-  width: 20rem;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.canvasBoysLogo {
-  max-width: 20rem;
-  height: 3rem;
-  padding: 0;
-  margin: 0;
-}
-
-.mainNav {
-  background-color: #1b1b1b !important;
-  border-bottom: 1px solid orange;
-}
+/*********************************************************/
 
 /* Canvas */
 
 .canvas {
   position: absolute;
+  overflow: hidden;
+}
+
+#canvasFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -79,15 +66,6 @@ html {
   height: 100vh;
 }
 
-#sidebar ul p {
-  padding: 0 1rem;
-}
-
-#sidebar ul li a {
-  padding: 1rem;
-  display: block;
-}
-
 #content {
   width: 100%;
   min-height: 100vh;
@@ -112,138 +90,6 @@ html {
 
 .btn-group {
   border-radius: 0px !important;
-}
-
-.colorPalette button:hover {
-  border: 1px solid white;
-}
-
-.btn1 {
-  background-color: #0000ff;
-}
-
-.btn2 {
-  background-color: #009fff;
-}
-
-.btn3 {
-  background-color: #0fffff;
-}
-
-.btn4 {
-  background-color: #bfffff;
-}
-
-.btn5 {
-  background-color: #000000;
-}
-
-.btn6 {
-  background-color: #333333;
-}
-
-.btn7 {
-  background-color: #666666;
-}
-
-.btn8 {
-  background-color: #999999;
-}
-
-.btn9 {
-  background-color: #ffcc66;
-}
-
-.btn10 {
-  background-color: #ffcc00;
-}
-
-.btn11 {
-  background-color: #ffff00;
-}
-
-.btn12 {
-  background-color: #ffff99;
-}
-
-.btn13 {
-  background-color: #003300;
-}
-
-.btn14 {
-  background-color: #555000;
-}
-
-.btn15 {
-  background-color: #00ff00;
-}
-
-.btn16 {
-  background-color: #99ff99;
-}
-
-.btn17 {
-  background-color: #f00000;
-}
-
-.btn18 {
-  background-color: #ff6600;
-}
-
-.btn19 {
-  background-color: #ff9933;
-}
-
-.btn20 {
-  background-color: #f5deb3;
-}
-
-.btn21 {
-  background-color: #330000;
-}
-
-.btn22 {
-  background-color: #663300;
-}
-
-.btn23 {
-  background-color: #cc6600;
-}
-
-.btn24 {
-  background-color: #deb887;
-}
-
-.btnA1 {
-  background-color: #331832;
-}
-
-.btnA2 {
-  background-color: #de6449;
-}
-
-.btnA3 {
-  background-color: #a1fcdf;
-}
-
-.btnA4 {
-  background-color: #298089;
-}
-
-.btnA5 {
-  background-color: #7fff00;
-}
-
-.btnA6 {
-  background-color: #b20d30;
-}
-
-.btnA7 {
-  background-color: #fffcf9;
-}
-
-.btnA8 {
-  background-color: #f6ae2d;
 }
 
 .brushes {
@@ -347,6 +193,55 @@ html {
   font-size: 0.5rem;
 }
 
+#premiumSidebar {
+  max-width: 18rem;
+  min-width: 18rem;
+  opacity: 0.75;
+  transition: all 0.5s;
+  font-weight: bold;
+  z-index: 999;
+  position: fixed;
+  height: 100%;
+}
+
+/*********************************************************/
+
+/********* animation color button    *******/
+
+.btnA1 {
+  background-color: #331832;
+}
+
+.btnA2 {
+  background-color: #de6449;
+}
+
+.btnA3 {
+  background-color: #a1fcdf;
+}
+
+.btnA4 {
+  background-color: #298089;
+}
+
+.btnA5 {
+  background-color: #7fff00;
+}
+
+.btnA6 {
+  background-color: #b20d30;
+}
+
+.btnA7 {
+  background-color: #fffcf9;
+}
+
+.btnA8 {
+  background-color: #f6ae2d;
+}
+
+/************************************/
+
 /******************************************************************************/
 
 /* navbar */
@@ -372,11 +267,16 @@ html {
   box-shadow: none;
 }
 
-#canvasFrame {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+.canvasBoysLogo {
+  max-width: 20rem;
+  height: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+.mainNav {
+  background-color: #1b1b1b !important;
+  border-bottom: 1px solid orange;
 }
 
 /******************************************************************************/
@@ -397,26 +297,6 @@ html {
   height: 100%;
   padding-top: 4.5rem;
   background-color: #000000;
-}
-
-.inner-hero {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  border: 2px solid white;
-}
-
-.inner-hero-header {
-  font-family: "Dancing Script", cursive;
-  color: #faedcb;
-  font-size: 8rem;
-}
-
-.inner-hero-text {
-  font-family: "Dancing Script", cursive;
-  color: #faedcb;
-  font-size: 4rem;
 }
 
 /******************************************************************************/
@@ -460,17 +340,6 @@ html {
   margin-left: 2rem;
 }
 
-#premiumSidebar {
-  max-width: 18rem;
-  min-width: 18rem;
-  opacity: 0.75;
-  transition: all 0.5s;
-  font-weight: bold;
-  z-index: 999;
-  position: fixed;
-  height: 100%;
-}
-
 /******************************************************************************/
 
 /* scroll bar */
@@ -494,24 +363,8 @@ html {
 /* @media */
 
 @media screen and (max-width: 500px) {
-  .inner-hero-header {
-    font-size: 5rem;
-  }
-
-  .inner-hero-text {
-    font-size: 3rem;
-  }
-
   .menu-btn {
     margin-left: -1rem;
-  }
-
-  .inner-aboutMe-icon {
-    width: 20rem;
-  }
-
-  .each-header {
-    font-size: 2.5rem;
   }
 }
 
